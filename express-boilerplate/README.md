@@ -1,7 +1,10 @@
 ### 1. Initialization
-
+Name express server here:
 ```
-mkdir express-boilerplate && cd $_ &&
+mkdir EXPRESS-SERVER-NAME && cd $_ &&
+```
+Run rest of commands:
+```
 echo "node_modules" > .gitignore &&
 npm init -y &&
 npm i express morgan cors dotenv helmet &&
