@@ -76,6 +76,17 @@ app.use(function errorHandler(error, req, res, next) {
 module.exports = app
 ```
 
+src/config.js:
+
+```
+'use strict';
+
+module.exports = {
+  PORT: process.env.PORT || 8000,
+  NODE_ENV: process.env.NODE_ENV || 'development',
+}
+```
+
 src/server.js:
 
 ```
@@ -89,17 +100,6 @@ const { PORT } = require('./config')
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`)
 })
-```
-
-src/config.js:
-
-```
-'use strict';
-
-module.exports = {
-  PORT: process.env.PORT || 8000,
-  NODE_ENV: process.env.NODE_ENV || 'development',
-}
 ```
 
 test/app.spec.js:
